@@ -15,7 +15,7 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
-chrome_service = Service(executable_path="C:\chromedriver-win64\chromedriver.exe")  # Caminho para o chromedriver
+chrome_service = chrome_service = Service(executable_path="/opt/render/project/.render/chrome/chromedriver")  # Caminho para o chromedriver
 
 @app.post("/get_profile_picture")
 async def get_profile_picture(phone: str):
