@@ -17,8 +17,8 @@ chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.binary_location = "/opt/render/project/.render/chrome/opt/google/chrome/chrome"  # Caminho para o binário do Chrome
 
-# Define o caminho do ChromeDriver
-chrome_service = Service(executable_path="/opt/render/project/.render/chrome/chromedriver")
+# Deixe o Selenium Manager gerenciar o ChromeDriver
+chrome_service = Service()
 
 @app.post("/get_profile_picture")
 async def get_profile_picture(phone: str):
